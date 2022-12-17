@@ -23,6 +23,15 @@ public class SimpleCalcGUI extends JFrame{
         btnCompute.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                try{
+                    Integer.parseInt(tfNumber1.getText());
+                    Integer.parseInt(tfNumber2.getText());
+                } catch (Exception x){
+                    JOptionPane.showMessageDialog(panel1, "One of the inputs is not an integer");
+                    tfNumber1.setText("");
+                    tfNumber2.setText("");
+                }
+
                 int num1 = Integer.parseInt(tfNumber1.getText());
                 int num2 = Integer.parseInt(tfNumber2.getText());
                 String sym = cbOperations.getSelectedItem().toString();
