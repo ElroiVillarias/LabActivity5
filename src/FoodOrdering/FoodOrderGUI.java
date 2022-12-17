@@ -23,7 +23,7 @@ public class FoodOrderGUI extends JFrame{
 
     public FoodOrderGUI() {
         this.setTitle("Food Ordering System");
-
+    //for checkbox
         FoodGroup = new ArrayList<>();
         FoodGroup.add(cPizza);
         FoodGroup.add(cBurger);
@@ -31,12 +31,13 @@ public class FoodOrderGUI extends JFrame{
         FoodGroup.add(cSoftDrinks);
         FoodGroup.add(cTea);
         FoodGroup.add(cSundae);
-
+    //for radiobutton
         DisGroup = new ArrayList<>();
         DisGroup.add(rbNone);
         DisGroup.add(rb5);
         DisGroup.add(rb10);
         DisGroup.add(rb15);
+
         btnOrder.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
