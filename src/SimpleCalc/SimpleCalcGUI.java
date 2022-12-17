@@ -27,7 +27,7 @@ public class SimpleCalcGUI extends JFrame{
                     Integer.parseInt(tfNumber1.getText());
                     Integer.parseInt(tfNumber2.getText());
                 } catch (Exception x){
-                    JOptionPane.showMessageDialog(panel1, "One of the inputs is not an integer");
+                    JOptionPane.showMessageDialog(panel1, "The input is not an integer");
                     tfNumber1.setText("");
                     tfNumber2.setText("");
                 }
@@ -35,16 +35,21 @@ public class SimpleCalcGUI extends JFrame{
                 int num1 = Integer.parseInt(tfNumber1.getText());
                 int num2 = Integer.parseInt(tfNumber2.getText());
                 String sym = cbOperations.getSelectedItem().toString();
-                int result;
+                int result = 0;
 
-                if(sym == "+"){
-                    result = num1 + num2;
-                } else if (sym == "-") {
-                    result = num1 - num2;
-                } else if (sym == "*") {
-                    result = num1 * num2;
-                } else {
-                    result = num1 / num2;
+                switch (sym) {
+                    case "+":
+                        result = num1 + num2;
+                        break;
+                    case "-":
+                        result = num1 - num2;
+                        break;
+                    case "*":
+                        result = num1 * num2;
+                        break;
+                    case "/":
+                        result = num1 / num2;
+                        break;
                 }
 
                 lblResult.setText(String.valueOf(result));
