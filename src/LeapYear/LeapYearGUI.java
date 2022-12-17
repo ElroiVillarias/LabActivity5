@@ -39,6 +39,8 @@ public class LeapYearGUI extends JFrame {
                     JOptionPane.showMessageDialog(panel1, "Not a leap year");
                 }
 
+                tfYear.setText("");
+
             }
         });
 
